@@ -5,7 +5,7 @@
 	.field__wrapper {
 		width: 100%;
 		display: grid;
-	}
+	
 
 	position: relative;
 
@@ -25,6 +25,10 @@
 
 		position: absolute;
 		right: 16px;
-		top: 52%;
+		top: calc(50% - 10px);
+	}
+}
+      .field__input {
+		padding-right: calc(16px + 20px + 16px);
 	}
 }

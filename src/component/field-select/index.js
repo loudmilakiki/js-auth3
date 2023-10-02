@@ -26,11 +26,11 @@ class FieldSelect {
 
     target.toggleAttribute('active')
 
-    const label = parent.querySelector('.field__value')
+    const value = parent.querySelector('.field__value')
 
-    if (label) {
-      label.innerText = target.innerText
-      label.classList.remove('field__value--placeholder')
+    if (value) {
+      value.innerText = target.innerText
+      value.classList.remove('field__value--placeholder')
     }
 
     list.toggleAttribute('active')

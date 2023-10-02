@@ -1,12 +1,13 @@
 @use '../../style' as s;
 
 :root {
-	background-color: s.color(dark);
+	background-color: s.color('dark');
 }
 
 html {
 	min-height: 100%;
 	padding: 64px 0;
+	display: grid;
 }
 
 body {
