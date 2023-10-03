@@ -30,7 +30,7 @@ gap: s.space(3);
 
     @include s.click;
 
-    &:--active {
+    &:active {
         opacity: 0.3;
     }
 
@@ -41,7 +41,7 @@ gap: s.space(3);
         &:hover, 
         &:active {
           opacity: 0.5;
-          cursor: pointer;
+          cursor: default;
         }
     }
 }
@@ -49,7 +49,7 @@ gap: s.space(3);
 .alert {
     border: 1px solid transparent;
     border-radius: 10px;
-    padding: s.space(3) s.space(8);
+    padding: s.space(3) s.space(4);
     font-size: 14px;
 
     &--success {
