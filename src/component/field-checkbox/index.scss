@@ -1,5 +1,5 @@
 @use '../../style' as s;
-//@use '../field/index.scss' as field;
+@use '../field/index.scss' as field;
 
 .field--checkbox {
 	.field__wrapper {
@@ -25,7 +25,7 @@
 	}
 
 	.field__label--checkbox {
-		font-size: 16px;
+		font-size: 14px;
 		color: s.color('dark');
 		padding-top: 3px;
 	}

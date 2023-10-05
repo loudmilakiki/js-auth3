@@ -1,5 +1,6 @@
 @use '../../style' as s;
 @use '../field/index.scss' as field;
+
 .field--select {
 	.field__select {
 		border: 1px solid s.color('box');
