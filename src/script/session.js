@@ -8,7 +8,7 @@ export const saveSession = (session) => {
       JSON.stringify(session),
     )
   } catch (er) {
-    console.log(er)
+    console.log(err)
     window.session = null
   }
 }

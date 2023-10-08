@@ -8,9 +8,21 @@ const { Confirm } = require('../class/confirm')
 const { Session } = require('../class/session')
 
 User.create({
-  email: 'test@mail.com',
+  email: 'user@mail.com',
   password: 'P@ssw0rd',
   role: 1,
+})
+
+User.create({
+  email: 'admin@mail.com',
+  password: 'P@ssw0rd',
+  role: 2,
+})
+
+User.create({
+  email: 'developer@mail.com',
+  password: 'P@ssw0rd',
+  role: 3,
 })
 
 // ================================================================
@@ -22,7 +34,7 @@ router.get('/signup', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('signup', {
+  return res.render('signup', {
     // вказуємо назву контейнера
     name: 'signup',
     // вказуємо назву компонентів
@@ -99,7 +111,7 @@ router.get('/recovery', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('recovery', {
+  return res.render('recovery', {
     // вказуємо назву контейнера
     name: 'recovery',
     // вказуємо назву компонентів
@@ -153,14 +165,14 @@ router.get('/recovery-confirm', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('recovery-confirm', {
+  return res.render('recovery-confirm', {
     // вказуємо назву контейнера
     name: 'recovery-confirm',
     // вказуємо назву компонентів
     component: ['back-button', 'field', 'field-password'],
 
     // вказуємо назву сторінки
-    title: 'Recovery confirm page',
+    title: 'Recovery Confirm page',
     // ... сюди можна далі продовжувати додавати потрібні технічні дані, які будуть використовуватися в layout
 
     // вказуємо дані,
@@ -174,7 +186,7 @@ router.post('/recovery-confirm', function (req, res) {
 
   console.log(password, code)
 
-  if (!code || password) {
+  if (!code || !password) {
     return res.status(400).json({
       message: "Помилка. Обов'язкові поля відсутні",
     })
@@ -327,7 +339,7 @@ router.post('/login', function (req, res) {
       })
     }
 
-    if (!user.password !== password) {
+    if (user.password !== password) {
       return res.status(400).json({
         message: 'Помилка. Пароль не підходить',
       })

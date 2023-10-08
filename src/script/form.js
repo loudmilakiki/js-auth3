@@ -3,7 +3,7 @@ export const REG_EXP_EMAIL = new RegExp(
 )
 
 export const REG_EXP_PASSWORD = new RegExp(
-  /^ (?=.*\d)(?=.* [a - z])(?=.* [A - Z])(?=.* [a - zA - Z]).{ 8, }$/,
+  /^ (?=.*\d)(?=.*[a-z])(?=.* [A-Z])(?=.*[a-zA-Z]).{8,}$/,
 )
 
 export class Form {

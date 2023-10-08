@@ -1,8 +1,4 @@
-import {
-  Form,
-  REG_EXP_EMAIL,
-  REG_EXP_PASSWORD,
-} from '../../script/form'
+import { Form, REG_EXP_PASSWORD } from '../../script/form'
 
 import { saveSession } from '../../script/session'
 

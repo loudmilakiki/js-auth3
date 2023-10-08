@@ -22,6 +22,7 @@ router.get('/', function (req, res) {
   })
   // ↑↑ сюди вводимо JSON дані
 })
+//=========================================
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
 router.get('/home', function (req, res) {
@@ -43,6 +44,7 @@ router.get('/home', function (req, res) {
   })
   // ↑↑ сюди вводимо JSON дані
 })
+//===========================================
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
 router.get('/logout', function (req, res) {
@@ -66,10 +68,12 @@ router.get('/logout', function (req, res) {
 })
 // Підключіть файли роутів
 const auth = require('./auth')
+const user = require('./user')
 // Підключіть інші файли роутів, якщо є
 
 // Об'єднайте файли роутів за потреби
 router.use('/', auth)
+router.use('/', user)
 // Використовуйте інші файли роутів, якщо є
 
 // Експортуємо глобальний роутер
